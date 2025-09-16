@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import {Pencil, X} from "lucide-react";
+import {Pencil, X, Search} from "lucide-react";
 
 export default function ContactWidget() {
   const [contacts, setContacts] = useState([]);
@@ -134,13 +134,16 @@ export default function ContactWidget() {
       </div>
       <div className="size-auto bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6">
         <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-          📇 Gestionnaire de contacts
+          Gestionnaire de contacts 
+          <Search className="inline-block ml-2 mb-1"/>
         </h2>
+
+
 
         {loading && <p className="text-gray-500">Chargement...</p>}
         {error && <p className="text-red-500">{error}</p>}
 
-        <ul className="space-y-3 mb-4">
+        <ul className="space-y-3 mb-4 max-h-96 overflow-y-auto">
           {contacts.map((contact) => (
             <li
               key={contact._id}
