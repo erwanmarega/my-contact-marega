@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HomeIcon, UserIcon, Search, LogOut } from "lucide-react"; 
 
 const Navbar = () => {
@@ -17,9 +18,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className="mt-auto mb-4 ml-auto mr-auto">
-          <a href="/logout" className="hover:bg-gray-700 p-3 rounded-lg">
+          <Link to="/logout" className="hover:bg-gray-700 p-3 rounded-lg">
             <LogOut className="w-6 h-6 " />
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
