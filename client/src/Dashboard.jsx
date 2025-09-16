@@ -45,7 +45,7 @@ export default function ContactWidget() {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("❌ Erreur chargement contacts:", err);
+        console.error("Erreur chargement contacts:", err);
         setError("Impossible de charger les contacts.");
         setLoading(false);
       });
