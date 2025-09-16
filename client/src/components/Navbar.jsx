@@ -12,7 +12,7 @@ const Navbar = () => {
           <a href="/profile" className="hover:bg-gray-700 p-3 rounded-lg">
             <UserIcon className="w-6 h-6" />
           </a>
-          <a href="#settings" className="hover:bg-gray-700 p-3 rounded-lg">
+          <a href="" className="hover:bg-gray-700 p-3 rounded-lg">
             <Search className="w-6 h-6" />
           </a>
         </div>

@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const cors = require("cors");
 const app = express();
 const auth = require("./routes/routes");
-const contactTable = require("./contact_table");
+const contactTable = require("./routes/contact_table");
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
