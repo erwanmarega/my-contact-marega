@@ -4,7 +4,7 @@ import { HomeIcon, UserIcon, Search, LogOut } from "lucide-react";
 const Navbar = () => {
   return (
     <div className="flex ">
-      <nav className="flex flex-col w-20 h-screen bg-gray-800 text-white shadow-lg">
+      <nav className="flex flex-col w-14 h-screen bg-gray-800 text-white shadow-lg">
         <div className="flex flex-col items-center mt-4 space-y-4">
           <a href="/dashboard" className="hover:bg-gray-700 p-3 rounded-lg">
             <HomeIcon className="w-6 h-6" />
