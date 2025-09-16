@@ -38,7 +38,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-950">
       <div className="max-w-md w-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6">
         <h1 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
-          📇 Gestionnaire de contacts
+          Gestionnaire de contacts
         </h1>
 
         {error && <p className="text-red-500 mb-4">{error}</p>}

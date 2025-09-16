@@ -10,6 +10,8 @@ const app = express();
 const auth = require("./routes/routes");
 const contactTable = require("./routes/contact_table");
 const loginRoutes = require("./routes/loginRoutes");
+const signupRoutes = require("./routes/signupRoutes");
+const userRoutes = require("./routes/userRoutes");
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
@@ -24,6 +26,8 @@ app.use(cookieParser());
 app.use("/api", auth);
 app.use("/api", contactTable);
 app.use("/api", loginRoutes);
+app.use ("/api", signupRoutes);
+app.use("/api/user", userRoutes);
 
 const swaggerOptions = {
   definition: {
@@ -39,7 +43,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./routes/contact_table.js", "./index.js" , "./routes/loginRoutes.js" ],
+  apis: ["./routes/contact_table.js", "./index.js" , "./routes/loginRoutes.js" , "./routes/signupRoutes.js"],
 };
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 
