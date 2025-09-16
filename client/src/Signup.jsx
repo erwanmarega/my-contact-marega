@@ -7,6 +7,8 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState(""); 
+  const [success, setSuccess] = useState("");
+  
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
@@ -23,14 +25,22 @@ const Signup = () => {
       });
 
       if (response.ok) {
-        navigate("/dashboard");
+        setSuccess("Inscription réussie ! Vous pouvez maintenant vous connecter.");
+        setError(""); 
+    
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        setPhone("");
+        setTimeout(() => navigate("/login"), 2000);
+    
       } else {
         const data = await response.json();
         setError(data.message || "Échec de l'inscription");
         console.error("Signup échoué:", data.message);
       }
     } catch (err) {
-      setError("Erreur serveur, réessayez plus tard");
+      setError("Erreur serveur ");
       console.error("Error during signup:", err);
     }
   };
@@ -106,6 +116,10 @@ const Signup = () => {
           {error && (
             <p className="text-red-500 mb-4">{error}</p>
           )}
+
+            {success && (
+            <p className="text-green-500 mb-4">{success}</p>
+            )}
 
           <button
             type="submit"
