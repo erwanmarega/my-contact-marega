@@ -14,9 +14,10 @@ const signupRoutes = require("./routes/signupRoutes");
 const userRoutes = require("./routes/userRoutes");
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const allowedOrigins = [process.env.FRONTEND_URL, FRONTEND_URL_PROD];
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL, 
+  origin: allowedOrigins,
   credentials: true,
 }));
 
