@@ -84,17 +84,42 @@ password : mdp300
 Hébergé sur **Render**
 
 Via ce lien 
-```bash
-https://my-contact-marega.onrender.com/
-```
+
+(https://my-contact-marega.onrender.com/)
+
 
 ## 2. Frontend
 Hébergé sur **Vercel**
 
 Via ce lien 
-```bash
-https://my-contact-marega.vercel.app/
-```
+
+(https://my-contact-marega.vercel.app/)
+
+## Dépendances
+
+### Backend
+Le backend utilise Node.js avec les bibliothèques suivantes :
+
+- **bcrypt**: ^6.0.0 – pour le hachage des mots de passe  
+- **body-parser**: ^2.2.0 – pour parser le corps des requêtes HTTP  
+- **cookie-parser**: ^1.4.7 – pour gérer les cookies  
+- **cors**: ^2.8.5 – pour activer les requêtes cross-origin  
+- **dotenv**: ^17.2.2 – pour gérer les variables d'environnement  
+- **express**: ^5.1.0 – framework web  
+- **jsonwebtoken**: ^9.0.2 – pour l’authentification JWT  
+- **mongoose**: ^8.18.0 – pour interagir avec MongoDB  
+- **nodemon**: ^3.1.10 – pour recharger automatiquement le serveur en développement  
+- **swagger-jsdoc**: ^6.2.8 – pour générer la documentation API  
+- **swagger-ui-express**: ^5.0.1 – pour afficher la documentation API via Express
+
+### Frontend 
+- **@tailwindcss/vite**: ^4.1.13 – plugin Tailwind pour Vite
+- **lucide-react**: ^0.544.0 – icônes SVG
+- **react**: ^19.1.1 – bibliothèque principale React
+- **react-dom**: ^19.1.1 – rendu React dans le DOM
+- **react-router-dom**: ^7.9.1 – routage côté client
+- **tailwindcss**: ^4.1.13 – framework CSS utilitaire
+
 
 
 
