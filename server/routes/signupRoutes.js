@@ -7,7 +7,7 @@ const signupController = require("../controllers/signupController");
  * tags:
  *   name: Auth
  *   description: Gestion de l'authentification
- */
+ */ 
 
 /**
  * @swagger
