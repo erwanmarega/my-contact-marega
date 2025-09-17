@@ -1,3 +1,5 @@
+// Pas terminé la partie userController, à finir plus tard (à ne pas prendre en compte)
+
 const User = require("../models/user");
 
 const getMe = async (req, res) => {

@@ -1,3 +1,5 @@
+// Pas terminé la page profile, à finir plus tard (à ne pas prendre en compte)
+
 import React from "react";
 import Navbar from "./components/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -57,6 +59,7 @@ return (
 )
 
 };
+
 
 
 
