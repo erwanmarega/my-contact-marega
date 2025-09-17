@@ -22,19 +22,23 @@ const signupController = require("../controllers/signupController");
  *           schema:
  *             type: object
  *             required:
- *               - name
  *               - email
  *               - password
+ *               - confirmPassword
+ *               - phone
  *             properties:
- *               name:
- *                 type: string
- *                 example: Jean Dupont
  *               email:
  *                 type: string
- *                 example: jean.dupont@email.com
+ *                 example: test100@gmail.com
  *               password:
  *                 type: string
- *                 example: motdepasse123
+ *                 example: mdp100
+ *               confirmPassword:
+ *                 type: string
+ *                 example: mdp100
+ *               phone:
+ *                 type: string
+ *                 example: "0303020202"
  *     responses:
  *       201:
  *         description: Utilisateur créé avec succès
@@ -46,17 +50,18 @@ const signupController = require("../controllers/signupController");
  *                 id:
  *                   type: string
  *                   example: 64f4c2e5a1234b
- *                 name:
- *                   type: string
- *                   example: Jean Dupont
  *                 email:
  *                   type: string
- *                   example: jean.dupont@email.com
+ *                   example: test100@gmail.com
+ *                 phone:
+ *                   type: string
+ *                   example: "0303020202"
  *       400:
  *         description: Données invalides ou utilisateur déjà existant
  *       500:
  *         description: Erreur serveur
  */
+
 router.post("/signup", signupController.signup);
 
 module.exports = router;
