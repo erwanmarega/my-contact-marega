@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Profile() {
     
     const token = localStorage.getItem("token");
-    const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+    const apiURL = import.meta.env.VITE_API_URL;
     const [user, setUser] = React.useState(null);
     const [loading, setLoading] = React.useState(true);
     const [error, setError] = React.useState("");

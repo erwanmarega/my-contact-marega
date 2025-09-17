@@ -11,25 +11,25 @@ const Login = () => {
     e.preventDefault();
     setError(""); 
 
-    const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+  const apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
-    try {
-      const response = await fetch(`${apiURL}/api/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+ try {
+  const response = await fetch(`${apiURL}/api/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+const data = await response.json();
 
-      if (response.ok) {
-        localStorage.setItem("token", data.token);
-        navigate("/dashboard");
-      } else {
-        setError(data.message || "Email ou mot de passe invalide");
-      }
-    } catch (err) {
-      console.error("Erreur lors de la connexion:", err);
+  if (response.ok) {
+   localStorage.setItem("token", data.token);
+   navigate("/dashboard");
+   } else {
+    setError(data.message || "Email ou mot de passe invalide");
+    }
+   } catch (err) {
+    console.error("Erreur lors de la connexion:", err);
       setError("Erreur réseau ou serveur indisponible.");
     }
   };
@@ -92,10 +92,10 @@ const Login = () => {
           Tu n'as pas de compte ?{" "}
           <Link to="/signup" className="text-blue-500 hover:underline">
             S'inscrire
-          </Link>
-        </h6>
-      </div>
-    </div>
+     </Link>
+   </h6>
+ </div>
+ </div>
   );
 };
 
