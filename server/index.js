@@ -42,7 +42,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${port}/api`,
+        url: `http://localhost:${port}/api` `https://my-contact-marega.onrender.com/`,
       },
     ],
   },
