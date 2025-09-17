@@ -10,9 +10,9 @@ const Navbar = () => {
           <a href="/dashboard" className="hover:bg-gray-700 p-3 rounded-lg">
             <HomeIcon className="w-6 h-6" />
           </a>
-          <a href="/profile" className="hover:bg-gray-700 p-3 rounded-lg">
+          <Link to="/profile" className="hover:bg-gray-700 p-3 rounded-lg">
             <UserIcon className="w-6 h-6" />
-          </a>
+          </Link>
           <a href="" className="hover:bg-gray-700 p-3 rounded-lg">
             <Search className="w-6 h-6" />
           </a>
